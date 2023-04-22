@@ -3,6 +3,7 @@
     <Header />
     <PrimeiroComponente />
     <LifeCycle />
+    <Form />
   </div>
 </template>
 
@@ -10,13 +11,15 @@
 import Header from './components/Header'
 import PrimeiroComponente from './components/PrimeiroComponente.vue'
 import LifeCycle from './components/LifeCycle.vue'
+import Form from './components/Form.vue'
 
 export default {
   name: 'App',
   components: {
     PrimeiroComponente,
     LifeCycle,
-    Header
+    Header,
+    Form
   }
 }
 </script>
