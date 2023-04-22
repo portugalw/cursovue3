@@ -12,7 +12,8 @@
   <div>
     <button @click="showEmail">Mostrar e-mail</button>
   </div>
-  <p v-show="mostrar_email">Mande uma mensagem para: matheus@email.com</p>
+  <p v-show="mostrar_email">Mande uma mensagem para: {{ email }} </p>
+  <p v-show="mostrar_email">Mande uma mensagem para: {{ compEmail }} </p>
   <p>Para acessar meu portfólio <a v-bind:href="url_portfolio">basta clicar aqui</a></p>
   <Picture />
   <div>
@@ -29,6 +30,9 @@ export default {
   components: {
     Picture
   },
+  props : {
+    compEmail : String
+  },
   data() {
     return { 
       esta_trabalhando: false,
@@ -37,6 +41,7 @@ export default {
       backend_technologies: ["JavaScript", "PHP", "Python"],
       frontend_technologies: ["HTML", "CSS", "Vue"],
       multiplos_eventos: "",
+      email : "local@hotmail.com"
     
     }
   },
