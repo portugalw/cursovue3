@@ -16,8 +16,9 @@
   <p>Para acessar meu portfólio <a v-bind:href="url_portfolio">basta clicar aqui</a></p>
   <Picture />
   <div>
-    <button @click="primeiro($event), segundo($segundo)">Ativar múltiplos eventos</button>
+    <button @click="primeiro($event), segundo($event)">Ativar múltiplos eventos</button>
     <p>{{ multiplos_eventos }}</p>
+    
   </div>
 </template>
 <script>
@@ -35,7 +36,8 @@ export default {
       url_portfolio: "https://www.google.com",
       backend_technologies: ["JavaScript", "PHP", "Python"],
       frontend_technologies: ["HTML", "CSS", "Vue"],
-      multiplos_eventos: ""
+      multiplos_eventos: "",
+    
     }
   },
   methods: {
@@ -43,12 +45,14 @@ export default {
       this.mostrar_email = !this.mostrar_email
     },
     primeiro() {
-      this.multiplos_eventos = "Primeiro evento"
+      this.multiplos_eventos = "Primeiro evento";
+      console.log('1')
     },
     segundo() {
-      setTimeout(function() {
-        this.multiplos_eventos = "Segundo evento"
-      }, 300);
+      console.log('2')
+      setTimeout(() => {
+      this.multiplos_eventos = "Primeiro evento";
+      }, 500);
     }
   }
 }
