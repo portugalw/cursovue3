@@ -1,6 +1,6 @@
 <template>
   <h1>Meu nome é {{ nome }}</h1>
-  <Info />
+  <Info compEmail="teste@ingo.comn" />
 </template>
 
 <script>
